@@ -11,6 +11,6 @@ package multipuporsetranslator;
  */
 public enum Formato {
     TEXTO,
-    BINARIO,
-    MORSE
+    MORSE,
+    BINARIO
 }
