@@ -5,7 +5,7 @@
  */
 package multipuporsetranslator;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 /**
  *
@@ -13,7 +13,7 @@ import java.util.HashMap;
  */
 public class Mapas {
 
-    public static final HashMap<Integer, String> TEXT_MAP = new HashMap<Integer, String>() {
+    public static final LinkedHashMap<Integer, String> TEXT_MAP = new LinkedHashMap<Integer, String>() {
         {
             put(0x41, "A"); // A
             put(0x42, "B"); // B
@@ -73,7 +73,7 @@ public class Mapas {
         }
     };
 
-    public static final HashMap<Integer, String> MORSE_MAP = new HashMap<Integer, String>() {
+    public static final LinkedHashMap<Integer, String> MORSE_MAP = new LinkedHashMap<Integer, String>() {
         {
             put(0x41, ".-"); // A
             put(0x42, "-..."); // B
@@ -133,7 +133,7 @@ public class Mapas {
         }
     };
 
-    public static final HashMap<Integer, String> BINARY_MAP = new HashMap<Integer, String>() {
+    public static final LinkedHashMap<Integer, String> BINARY_MAP = new LinkedHashMap<Integer, String>() {
         {
             put(0x41, "01000001"); // A
             put(0x42, "01000010"); // B
