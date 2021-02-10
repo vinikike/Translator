@@ -10,7 +10,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  *
@@ -38,10 +37,14 @@ public class Translator {
         } while (!textoATraducir.isEmpty());
 
         List<Integer> claves = new ArrayList<>();
-        Set<Map.Entry<Integer, String>> set = mapaOrigen.entrySet();
-        Iterator<Map.Entry<Integer, String>> iterador = set.iterator();
         for (String valor : valoresDestino) {
-            claves.add(1);
+            Iterator<Map.Entry<Integer, String>> iterador = mapaOrigen.entrySet().iterator();
+            while (iterador.hasNext()) {
+                Map.Entry<Integer, String> e = iterador.next();
+                if (valor.equals(e.getValue())) {
+                    claves.add(e.getKey());
+                }
+            }
         }
 
         for (Integer clave : claves) {
